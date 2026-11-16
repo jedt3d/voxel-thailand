@@ -25,7 +25,15 @@ jobs:
       - name: Collect site files
         run: |
           mkdir _site
-          cp index.html .nojekyll _site/
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '_site' \
+            --exclude 'LICENSE' \
+            ./ _site/
+          # Keep LICENSE out of the published site root noise; README stays optional.
+          # Ensure nojekyll is present for GitHub Pages.
+          cp -f .nojekyll _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
