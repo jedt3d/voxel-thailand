@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Photoreal Oxeli Chess demo match — wooden board, autoplay review.">
+<title>Oxeli Chess — Demo Match</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:"Oxeli Diagram";
+  src:url("assets/fonts/Oxeli%20Diagram.ttf") format("truetype");
+  font-weight:400;font-style:normal;font-display:block;
+}
+</style>
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app">
+  <canvas id="c"></canvas>
+
+  <button type="button" id="btn-menu" class="menu-btn" aria-label="Toggle HUD" aria-expanded="true" title="Hide panels">
+    <span class="menu-btn__bars" aria-hidden="true"></span>
+  </button>
+
+  <div class="panel hud-panel" id="title">
+    <a class="back" href="../">← Voxel Thailand</a>
+    <h1>Oxeli <span>Chess</span></h1>
+    <p>Photoreal demo match — pieces move and capture on their own.</p>
+  </div>
+
+  <div class="panel hud-panel" id="hud">
+    <div class="row">
+      <button type="button" id="btn-play" class="on">Pause</button>
+      <button type="button" id="btn-replay">Replay</button>
+    </div>
+    <div id="status">
+      <div class="move">Starting position</div>
+      <div class="note">Loading board…</div>
+    </div>
+    <div id="moves"></div>
+  </div>
+
+  <div class="panel" id="credit">
+    Copyrights © 2026 Prinya Rojarayanont. All rights reserved.
+    <a href="http://www.oxelichess.net" target="_blank" rel="noopener">Oxeli Chess website</a>.
+  </div>
+
+  <div id="loading"><p>Carving the board…</p></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

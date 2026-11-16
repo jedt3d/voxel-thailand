@@ -1,11 +1,19 @@
 # Voxel Thailand
 
-Interactive voxel dioramas of Thai landmarks, built with three.js.
+Interactive 3D scenes of Thai landmarks and boards, built with three.js.
 
-## Wat Arun prang
+## Scenes
 
-`index.html` is a single self-contained page: the main prang, the four corner prangs and the mondops of Wat Arun as a floating voxel diorama, with the Chao Phraya, a royal barge procession, visitors, three times of day, an automatic camera tour, walk / fly navigation, an isometric mode and touch controls.
+| Path | Scene |
+| --- | --- |
+| [`/`](https://jedt3d.github.io/voxel-thailand/) | Hub |
+| [`/wat-arun-prang/`](https://jedt3d.github.io/voxel-thailand/wat-arun-prang/) | Wat Arun prang voxel diorama |
+| [`/oxeli-chess/`](https://jedt3d.github.io/voxel-thailand/oxeli-chess/) | Photoreal Oxeli Chess demo match |
 
-Proportions follow the Fine Arts Department plan and elevation; colours and ornament are estimates, not a survey.
+## Oxeli Chess
 
-Live: https://jedt3d.github.io/voxel-thailand/
+A slowly rotating wooden Oxeli board that autoplays a short review match, with cinematic camera beats for the cannon (`E`) and promoted queen (`Q`).
+
+Rules and piece identity follow the Thai source at [oxelichess.net](http://www.oxelichess.net). HUD is English.
+
+Copyrights © 2026 Prinya Rojarayanont. All rights reserved.
